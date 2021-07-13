@@ -12,4 +12,21 @@
 
 def dicetoorderedhand(a, b, c):
 	# your code goes here
-	pass
+	mohan = [a,b,c]
+	mohan.sort(reverse=True)
+	print (mohan)
+     
+	m = str(mohan[0])
+	m += str (mohan[1])
+	m += str (mohan[2])
+	n = int(m)
+ 
+	return (n)
+output = dicetoorderedhand(3,5,7)
+# print (output())
+
+
+
+ 
+ 
+	
