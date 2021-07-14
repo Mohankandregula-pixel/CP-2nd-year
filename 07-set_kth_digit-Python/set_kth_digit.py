@@ -13,7 +13,7 @@ def fun_set_kth_digit(n, k, d):
 		b = (n//10)%10
 		c = n%10
 		m = [a,b,c]
-		m[k]=d
+		m[-k]=d
 		n = str(m[0])
 		n += str (m[1])
 		n += str (m[2])
@@ -23,7 +23,7 @@ def fun_set_kth_digit(n, k, d):
 		b = (n//10)%10
 		c = n%10
 		m = [a,b,c]
-		m[k]=d
+		m[-k]=d
 		n = str(m[0])
 		n += str (m[1])
 		n += str (m[2])
