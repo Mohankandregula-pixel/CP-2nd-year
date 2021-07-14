@@ -7,30 +7,65 @@
 
 
 def fun_set_kth_digit(n, k, d):
+	if n>0:
+		if k>=3:
+			m = str(n)
+			k = int (f"{d}{m}")
+			return k
 
-	if len(str(n))>=k:
+				
 		a = n//100
 		b = (n//10)%10
 		c = n%10
 		m = [a,b,c]
-		m[-k]=d
+		m.reverse()
+		m[k]=d
+		m.reverse()
 		n = str(m[0])
 		n += str (m[1])
 		n += str (m[2])
+		return int(n)
+	if n<0:
+		n=abs(n)
+		if k>=3:
+			m = str(n)
+			k = int(f"{d}{m}")
+			return -k
+
 		
-	elif len(str(n))<k:
 		a = n//100
 		b = (n//10)%10
 		c = n%10
 		m = [a,b,c]
-		m[-k]=d
+		m.reverse()
+		m[k]=d
+		m.reverse()
 		n = str(m[0])
 		n += str (m[1])
 		n += str (m[2])
-		n += str (m[-k])
 
-	
-	return int(n)
+		return int(-n)	
 
-print(fun_set_kth_digit(514, 1, 2))
 
+print(fun_set_kth_digit(-468, 3, 1))
+
+	# if len(str(n))>=k:
+	# 	a = n//100
+	# 	b = (n//10)%10
+	# 	c = n%10
+	# 	m = [a,b,c]
+	# 	m[k]=d
+	# 	n = str(m[0])
+	# 	n += str (m[1])
+	# 	n += str (m[2])
+		
+	# elif len(str(n))<k:
+	# 	a = n//100
+	# 	b = (n//10)%10
+	# 	c = n%10
+	# 	m = [a,b,c]
+	# 	m[-k]=d
+	# 	n = str(m[0])
+	# 	n += str (m[1])
+	# 	n += str (m[2])
+	# 	n += str (m[-k])
