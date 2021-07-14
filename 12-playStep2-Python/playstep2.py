@@ -91,7 +91,7 @@ def playstep2(hand, dice):
 		m += str (k[2])
 		n = int(m)
 		return (n,r)
-	else a != b or b != c or c != a:
+	elif a != b or b != c or c != a:
 		k = [a,check[-1],check[-2]]
 		k.sort(reverse=True)
   
