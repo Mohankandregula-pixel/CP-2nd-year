@@ -4,6 +4,14 @@
 # will probably wish to use Heron's Formula.
 
 
+import math
 def trianglearea(s1, s2, s3):
 	# your code goes here
-	pass
+	a = s1
+	b = s2
+	c = s3
+	s =  ((a+b+c)/2)
+	area = (s*(s-a)*(s-b)*(s-c))**0.5
+	return area
+
+print (trianglearea(4,13,15))
