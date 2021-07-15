@@ -5,4 +5,12 @@
 
 def removeduplicate(text):
 	# Your code goes here
-	pass
+	n = set(text) 
+	m = list(n)
+	output=""
+	for i in range(len(m)):
+		output += m[i]
+
+	return output
+
+print(removeduplicate("Helloworld"))
