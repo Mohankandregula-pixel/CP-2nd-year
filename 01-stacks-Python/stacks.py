@@ -23,16 +23,20 @@ class LinkedList(object):
             current.next = new_element
         else:
             self.head = new_element
-    def delete(self):
-        if self.head:
-            del Linkedlist[0]
-            return self.head
 
     def insert_first(self, new_element):
-        self.head.append(new_element)
+        new_element.next = self.head
+        self.head = new_element
+        
 
     def delete_first(self):
-        self.head.delete()
+        if self.head: 
+            d = self.head
+            self.head = self.head.next
+            return d
+        else:
+            return None
+        
 
 class stack(object):
     def __init__(self,top=None):
@@ -40,13 +44,10 @@ class stack(object):
 
     def push(self, new_element):
         #"Push (add) a new element onto the top of the stack"
-        self.top.append(new_element)
-        pass
+        self.top.insert_first(new_element)
+        
 
-    # def pop(self):
-    #     #"Pop (remove) the first element off the top of the stack and return it"
-    #     if self.top:
-    #         return self.top.pop()
-    #     else:
-    #         return None
+    def pop(self):
+        #"Pop (remove) the first element off the top of the stack and return it"
+        self.top.delete_first()
     
