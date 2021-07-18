@@ -6,4 +6,15 @@
 
 
 def fun_get_kth_digit(digit, k):
-	return 0
+	digit = abs(digit) 
+	a = digit//100
+	b = (digit//10)%10
+	c = digit%10
+	list = [a,b,c]
+	m = list[::-1]
+	if k == abs(k) and k < len(m):
+		return m[k]
+	else:
+		return 0
+
+print(fun_get_kth_digit(789,2))
