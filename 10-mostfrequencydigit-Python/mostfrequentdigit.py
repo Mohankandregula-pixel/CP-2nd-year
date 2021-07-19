@@ -10,9 +10,11 @@ def mostfrequentdigit(n):
 	num = res[0]
 	for i in res:
 		curr_frequency = res.count(i)
-		if(curr_frequency> counter):
+		if(curr_frequency > counter):
 			counter = curr_frequency
+			num = i
+		elif curr_frequency == counter and (i < num):
 			num = i
 	return num
  
-print(mostfrequentdigit(1555666))
+print(mostfrequentdigit(5231123123123))
