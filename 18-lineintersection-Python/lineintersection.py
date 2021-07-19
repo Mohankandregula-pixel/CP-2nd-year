@@ -6,4 +6,11 @@
 
 def lineintersection(m1, b1, m2, b2):
 	# your code goes here
-	pass
+	if m1%m2 != 0 and m2%m1 != 0:
+		return int((b1-b2) / (m2-m1))
+	return None
+
+print(lineintersection(4, 13, 8, 17))
+print(lineintersection(2, 13, 2, 14))
+print(lineintersection(4, 13, 3, 17))
+print(lineintersection(4, 27, 9, 17))
