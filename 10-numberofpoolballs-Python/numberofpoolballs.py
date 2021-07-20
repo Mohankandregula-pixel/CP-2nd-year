@@ -9,4 +9,8 @@
 
 def numberofpoolballs(rows):
 	# Your code goes here
-	pass
+	n=rows
+	n = n*(n+1)/2
+	return int(n)
+
+print(numberofpoolballs(3))
