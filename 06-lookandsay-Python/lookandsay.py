@@ -13,18 +13,18 @@ def lookandsay(a):
 	# Your code goes here
     m = []
     o = 0
-    cou=1
+    count =1
     if(len(a)==0):
         return m
     for i in a:
         if(i!=o):
-            m.append((cou,o))
+            m.append((count,o))
             o=i
-            cou=1
+            count =1
         else:
-            cou=cou+1
+            count =count+1
             
-    m.append((cou,i)) 
+    m.append((count,i)) 
              
     return m[1:]
 
