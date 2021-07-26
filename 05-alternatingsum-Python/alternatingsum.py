@@ -13,4 +13,4 @@ def fun_alternatingsum(a):
             altSum-=a[i]
     return altSum
 
-
+print(fun_alternatingsum([7,8,7,6]))
